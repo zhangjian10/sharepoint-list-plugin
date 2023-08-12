@@ -70,7 +70,7 @@ const getFileList = async (allowCache) => {
             fileList.push({filename, directLink});
         }
     }
-
+    fileList.sort((a, b) => a.filename.localeCompare(b.filename));
     // 缓存
     cachedUrl = url.search;
     cachedFileList = fileList;
